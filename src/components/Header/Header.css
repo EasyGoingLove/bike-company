@@ -1,0 +1,13 @@
+.header-container {
+    background-color: brown;
+    position:absolute;
+    left:0; top:0px; bottom: 0;
+    width: 10%;
+}
+.header-btns{
+    padding-top: 60%;
+}
+.header-icons{
+    width: 50%;
+    height: 50%;
+}
