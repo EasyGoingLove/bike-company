@@ -2,22 +2,51 @@
     background-color: rgb(116, 225, 245);
     position:absolute;
     left:0; top:0px; bottom: 0;
+    width: 5%;
+}
+.header-container:hover {
+    background-color: rgb(116, 225, 245);
+    position:absolute;
+    left:0; top:0px; bottom: 0;
     width: 10%;
 }
 .logo{
    color: #ffffff;
    font-family: 'Raleway',sans-serif; 
-   font-size: 160%; 
+   font-size: 60%; 
    font-weight: 800; 
    line-height: 72px; 
    margin: 0 0 24px; 
    text-align: center; 
    text-transform: uppercase; 
 }
+.header-container:hover>.logo{
+    color: #ffffff;
+    font-family: 'Raleway',sans-serif; 
+    font-size: 160%; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase; 
+ }
 .header-btns{
-    padding-top: 60%;
+    padding-top: 50%;
+    border-bottom: 3px rgb(26, 25, 25) solid;
+    border-radius: 40px;
 }
 .header-icons{
     width: 50%;
     height: 50%;
+}
+
+.header-container:hover>.header-icons{
+    width: 80%;
+    height: 80%;
+}
+.button-info{
+    display: none;
+}
+.header-container:hover .button-info{
+    display: block;
 }

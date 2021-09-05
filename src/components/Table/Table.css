@@ -1,11 +1,13 @@
 .table-container{
     margin: auto;
     width: 60%;
-    border: 3px solid green;
     padding: 10px;
     margin-top: 5%;
 }
-
+.h1-text{
+    color: rgb(6, 80, 12);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -16,9 +18,27 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even){background-color: #f2f2f2}
+  tr:nth-child(even){background-color: #d2f7eb}
+  tr:nth-child(odd){background-color: #d2f7eb}
   
   th {
     background-color: #04AA6D;
     color: white;
+  }
+
+  .btn-container{
+      padding-top: 20%;
+  }
+  .btn{
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .btn:hover{
+    background-color: #08774e; /* Green */ 
   }
