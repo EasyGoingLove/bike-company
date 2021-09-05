@@ -10,6 +10,7 @@ const Header = () => {
 
     return(
      <div className="header-container">
+         <h1 className="logo">BikeRent</h1>
         {icons.map((e:string,i:number)=>{
             return(
              <div className="header-btns">
@@ -18,13 +19,6 @@ const Header = () => {
             )
          })
          }
-      
-      {/*
-      1.Display pariod array dates
-      2.Add a new object in the array table
-      3.Calculate 
-      */}
-
     </div>
     )
 };
