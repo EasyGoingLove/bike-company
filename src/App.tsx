@@ -19,7 +19,26 @@ function App() {
       else if(currentID==='id:1'){
         setScreen(<Calculator/>);
       }else{
-        setScreen(<Table information={data}/>);
+        let added:any = localStorage.getItem("addedItem");
+        let parsed:any = JSON.parse(added);
+        let newArr:any[] = [];
+        let partArr:any[] = [];
+        let counter:number= 0;
+          
+        for (let i in parsed) {
+           
+            if((counter/3)===1) {
+              partArr[counter] = parsed[i];
+              counter=0;
+              newArr.push(partArr);
+              partArr=[];
+              
+            }else{
+              partArr[counter] = parsed[i];
+              counter++;
+            } 
+        }
+        setScreen(<Table addedinformation={newArr} information={data}/>);
       }
    
   };

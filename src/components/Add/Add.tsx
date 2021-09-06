@@ -17,8 +17,18 @@ const Add = () => {
       if(from.toString()>to.toString()||from.toString()<added.toString()){
        alert("Invalid inputs dates must be correct.")
       }else{
-          let dataToAdd = [price,from,to,added] ;
-        localStorage.setItem(`added`, JSON.stringify(dataToAdd))
+        let dataToAdd = [price,from,to,added] ;
+        let a:any = localStorage.getItem("addedItem");
+            if(a===null){
+                localStorage.setItem(`addedItem`,JSON.stringify(dataToAdd))
+            }else{
+                let b =JSON.parse(a); 
+                console.log(b);
+                
+                let newItems = b.concat(dataToAdd); 
+                localStorage.setItem(`addedItem`,JSON.stringify(newItems))
+            }
+        alert("Period Saved Successfully.")
       }
       
   }
