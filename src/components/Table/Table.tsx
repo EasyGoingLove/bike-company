@@ -12,12 +12,23 @@ type TableProps = {
 const Table = (props:TableProps) => {
 
     const saveToStorage = ()=>{
+        let dataToAdd:string[] = [];
         for (let i = 0; i < props.information.length; i++) {
-            localStorage.setItem(`item:${i} Price`, props.information[i].price_per_day)
-            localStorage.setItem(`item:${i} From`, props.information[i].from)
-            localStorage.setItem(`item:${i} To`, props.information[i].to)
-            localStorage.setItem(`item:${i} Added`, props.information[i].added)        
+              dataToAdd = [
+                 props.information[i].price_per_day,
+                 props.information[i].from,
+                 props.information[i].to,
+                 props.information[i].added
+            ]  
         }  
+        let a = localStorage.getItem("presetItems");
+        if(a!=null){
+         let newItems = a + dataToAdd; // make an array of arrays
+         localStorage.setItem(`presetItems`,JSON.stringify(newItems))
+        }else{
+            localStorage.setItem(`presetItems`,JSON.stringify(dataToAdd)) 
+        }
+        
     };
 
   return (
