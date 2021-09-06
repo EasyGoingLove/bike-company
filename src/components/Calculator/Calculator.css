@@ -1,0 +1,38 @@
+
+  .calculator-container{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    margin-top: 5%;
+  }
+.calc-btn{
+    background-color: rgb(116, 225, 245); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 5%;
+  }
+  .calc-btn:hover{
+    background-color: rgb(45, 219, 250); 
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: white}
+  tr:nth-child(odd){background-color: white}
+  
+  th {
+    background-color: rgb(116, 225, 245);
+    color: white;
+  }

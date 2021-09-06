@@ -5,14 +5,12 @@ import "./Table.css";
 type TableProps = {
     information : any,
     addedinformation : any,
-    // price: number,
-    // date:string
 };
 
 
 const Table = (props:TableProps) => {
 
-    const saveToStorage = ()=>{
+    const saveToStorage = ()=>{   
         let dataToAdd:string[] = [];
         for (let i = 0; i < props.information.length; i++) {
               dataToAdd = [
@@ -27,14 +25,11 @@ const Table = (props:TableProps) => {
                 localStorage.setItem(`presetItems`,JSON.stringify(dataToAdd))
             }else{
                 let b =JSON.parse(a); 
-                console.log(b);
+                let newItems = b.concat(dataToAdd);
+                if(b.length<16){localStorage.setItem(`presetItems`,JSON.stringify(newItems))} 
                 
-                let newItems = b.concat(dataToAdd); 
-                localStorage.setItem(`presetItems`,JSON.stringify(newItems))
             }
         }  
-      
-       
     };
 
   return (
